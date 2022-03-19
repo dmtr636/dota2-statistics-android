@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Статистика Dota 2</string>
+    <string name="tab_text_1">Обзор</string>
+    <string name="tab_text_2">Матчи</string>
+    <string name="tab_text_3">Герои</string>
+    <string name="tab_text_4">Предметы</string>
+    <string name="tab_text_5">Рекорды</string>
+
+    <string name="search_player">Поиск игрока</string>
+
+    <string name="match_tab_text_1">Обзор</string>
+    <string name="match_tab_text_2">Фарм</string>
+    <string name="match_tab_text_3">Урон</string>
+    <string name="match_tab_text_4">Графики</string>
+    <string name="favourite_players">Избранные\nигроки</string>
+    <string name="search">ПОИСК</string>
+    <string name="search_field_hint">НИК, STEAM ID, URL, МАТЧ</string>
+    <string name="overview">Обзор</string>
+    <string name="farm">Фарм</string>
+    <string name="damage">Урон</string>
+    <string name="charts">Графики</string>
+    <string name="player_stats">статистика\nигрока</string>
+    <string name="all_pick">ALL PICK</string>
+    <string name="unranked">Нерейтинговая</string>
+    <string name="ranked">Рейтинговая</string>
+    <string name="duration">Длительность:</string>
+    <string name="date">Дата:</string>
+    <string name="win_of">Победа сил ...</string>
+    <string name="match_number">Матч №</string>
+    <string name="matches">матчи</string>
+    <string name="heroes">герои</string>
+    <string name="items">Предметы</string>
+    <string name="records">Рекорды</string>
+    <string name="search_results">РЕЗУЛЬТАТЫ\nПОИСКА</string>
+
+    <string name="dialog_help_text_1">Как найти игрока</string>
+    <string name="dialog_help_text_2">Для того, чтобы найти определённого игрока, необходимо в поле поиска ввести его Steam ID, URL или текущий никнейм</string>
+    <string name="dialog_help_text_3">Как узнать Steam ID?</string>
+    <string name="dialog_help_text_4">Нажмите на свой никнейм в правом верхнем углу Steam и перейдите в раздел: «Об аккаунте»</string>
+    <string name="dialog_help_text_5">Как узнать Steam URL?</string>
+    <string name="dialog_help_text_6">Зайдите на профиль игрока в браузере. В адресной строке отобразится его URL</string>
+
+    <string name="hero">Герой</string>
+    <string name="result">Результат</string>
+    <string name="games">Игры:</string>
+    <string name="wins">Победы:</string>
+    <string name="loading">Загрузка...</string>
+    <string name="loses">Поражения:</string>
+    <string name="time_in_game">Время в игре:</string>
+    <string name="winrate">Доля побед:</string>
+    <string name="avgKda">Средний KDA:</string>
+    <string name="games_count">Кол-во игр</string>
+    <string name="wins_percentage">Процент побед</string>
+    <string name="item">Предмет</string>
+    <string name="gold">Золото</string>
+    <string name="experience">Опыт</string>
+    <string name="dire_forces">Силы тьмы</string>
+    <string name="radiant_forces">Силы света</string>
+    <string name="missing_charts_error_message">Данный матч ещё не был проанализирован</string>
+    <string name="analyze_match">Анализ матча</string>
+    <string name="analyze_match_button_label">Может занять до 30 сек.</string>
+    <string name="buildings">Постройки</string>
+    <string name="heal">Лечение</string>
+    <string name="player">Игрок</string>
+    <string name="lasthits_denies">Добито / отнято</string>
+    <string name="level">Уровень</string>
+    <string name="backpack">Рюкзак</string>
+    <string name="navigation">Навигация:</string>
+    <string name="kda">У/С/П</string>
+    <string name="lose">Поражение</string>
+
+    <string name="anonymous">Аноним</string>
+    <string name="date_format">dd/MM/yyyy HH:mm</string>
+    <string name="date_format_dots">dd.MM.yyyy</string>
+
+    <string name="win">Победа</string>
+    <string name="fill_search_field">Заполните поле поиска</string>
+    <string name="abbreviated_hour">ч.</string>
+    <string name="radiant_victory">Победа сил света</string>
+    <string name="dire_victory">Победа сил тьмы</string>
+    <string name="charts_for_old_matches_error_message">Просмотр графиков доступен только для матчей за прошедший месяц</string>
+    <string name="dotabuff_url">https://ru.dotabuff.com/</string>
+    <string name="snackbar_error">Произошла ошибка. Попробуйте ещё раз</string>
+
+    <string name="gpm_xpm">GPM/XPM</string>
+</resources>

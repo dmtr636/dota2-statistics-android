@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date_format">MM/dd/yyyy HH:mm</string>
+    <string name="date_format_dots">MM.dd.yyyy</string>
+
+</resources>

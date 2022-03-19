@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dota 2 统计</string>
+    <string name="tab_text_1">概览</string>
+    <string name="tab_text_2">比赛</string>
+    <string name="tab_text_3">英雄</string>
+    <string name="tab_text_4">装备</string>
+    <string name="tab_text_5">纪录</string>
+
+    <string name="search_player">搜索</string>
+
+    <string name="match_tab_text_1">概览</string>
+    <string name="match_tab_text_2">补刀</string>
+    <string name="match_tab_text_3">英雄伤害</string>
+    <string name="match_tab_text_4">图表</string>
+    <string name="favourite_players">入选球员</string>
+    <string name="search">搜索</string>
+    <string name="search_field_hint">昵称, ID, URL, 匹配</string>
+    <string name="overview">概览</string>
+    <string name="farm">补刀</string>
+    <string name="damage">英雄伤害</string>
+    <string name="charts">图表</string>
+    <string name="player_stats">球员统计</string>
+    <string name="all_pick">ALL PICK</string>
+    <string name="unranked">普通游戏</string>
+    <string name="ranked">天梯比赛</string>
+    <string name="duration">比赛时长:</string>
+    <string name="date">比赛结束:</string>
+    <string name="win_of">胜利 ...</string>
+    <string name="match_number">匹配 №</string>
+    <string name="matches">比赛</string>
+    <string name="heroes">英雄</string>
+    <string name="items">装备</string>
+    <string name="records">纪录</string>
+    <string name="search_results">搜索结果</string>
+    <string name="dialog_help_text_1">怎么找球员</string>
+    <string name="dialog_help_text_2">为了找到某个玩家，您需要在搜索栏中输入他的 Steam ID、URL 或当前昵称。</string>
+    <string name="dialog_help_text_3">如何找到 Steam ID？</string>
+    <string name="dialog_help_text_4">点击 Steam 右上角的昵称，然后前往：“关于帐户”。</string>
+    <string name="dialog_help_text_5">如何找到 Steam URL？</string>
+    <string name="dialog_help_text_6">在浏览器中转到玩家的个人资料。它的 URL 将显示在地址栏中。</string>
+    <string name="hero">英雄</string>
+    <string name="result">结果</string>
+    <string name="games">战绩:</string>
+    <string name="wins">获胜:</string>
+    <string name="loading">等待...</string>
+    <string name="loses">失败:</string>
+    <string name="time_in_game">游戏时间:</string>
+    <string name="winrate">胜率:</string>
+    <string name="avgKda">杀/死/助攻:</string>
+    <string name="games_count">战绩</string>
+    <string name="wins_percentage">胜率</string>
+    <string name="item">装备</string>
+    <string name="gold">财产总和</string>
+    <string name="experience">经验</string>
+    <string name="dire_forces">夜魇</string>
+    <string name="radiant_forces">天辉</string>
+    <string name="missing_charts_error_message">本场比赛尚未分析</string>
+    <string name="analyze_match">比赛分析</string>
+    <string name="analyze_match_button_label">等待...</string>
+    <string name="buildings">建筑伤害</string>
+    <string name="heal">英雄治疗</string>
+    <string name="player">选手</string>
+    <string name="lasthits_denies">正补 / 反补</string>
+    <string name="level">等级</string>
+    <string name="backpack">背包</string>
+    <string name="navigation">导航:</string>
+    <string name="kda">杀/死/助攻</string>
+    <string name="lose">失败</string>
+
+    <string name="anonymous">匿名</string>
+    <string name="date_format">dd/MM/yyyy HH:mm</string>
+    <string name="date_format_dots">dd.MM.yyyy</string>
+
+    <string name="win">胜利</string>
+    <string name="fill_search_field">填写搜索栏</string>
+    <string name="abbreviated_hour">小时</string>
+    <string name="radiant_victory">天辉胜利</string>
+    <string name="dire_victory">夜魇胜利</string>
+    <string name="charts_for_old_matches_error_message">查看图表仅适用于过去一个月的比赛</string>
+    <string name="dotabuff_url">https://zh.dotabuff.com/</string>
+    <string name="snackbar_error">发生错误。 再试一次</string>
+
+    <string name="gpm_xpm">金钱/分 / 经验/分</string>
+</resources>

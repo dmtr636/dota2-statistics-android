@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="25"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fbb829"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/heroIcon"
+        android:layout_width="41dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pudge" />
+
+    <TextView
+        android:id="@+id/playerKda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="1 / 2 / 3"
+        android:textColor="#c1c1c1"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerName"
+        app:layout_constraintTop_toBottomOf="@+id/playerName" />
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="abcdefghjklmn..."
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toTopOf="@+id/playerKda"
+        app:layout_constraintStart_toEndOf="@+id/heroIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout10"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playerName"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/item1"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toStartOf="@+id/item2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item0"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toStartOf="@+id/item1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item2"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item5"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item2" />
+
+        <ImageView
+            android:id="@+id/item4"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toStartOf="@+id/item5"
+            app:layout_constraintTop_toBottomOf="@+id/item1" />
+
+        <ImageView
+            android:id="@+id/item3"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            app:layout_constraintEnd_toStartOf="@+id/item4"
+            app:layout_constraintTop_toBottomOf="@+id/item0" />
+
+        <ImageView
+            android:id="@+id/itemNeutral"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item0"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/level"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout10"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backpack0"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp" />
+
+        <ImageView
+            android:id="@+id/backpack1"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp" />
+
+        <ImageView
+            android:id="@+id/backpack2"
+            android:layout_width="18dp"
+            android:layout_height="13.6dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

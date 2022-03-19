@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dota 2 Statistics</string>
+
+    <string name="tab_text_1">Overview</string>
+    <string name="tab_text_2">Matches</string>
+    <string name="tab_text_3">Heroes</string>
+    <string name="tab_text_4">Items</string>
+    <string name="tab_text_5">Records</string>
+
+    <string name="search_player">Search player</string>
+
+    <string name="match_tab_text_1">Overview</string>
+    <string name="match_tab_text_2">Farm</string>
+    <string name="match_tab_text_3">Damage</string>
+    <string name="match_tab_text_4">Charts</string>
+
+    <string name="favourite_players">Favourite\nplayers</string>
+    <string name="search">SEARCH</string>
+    <string name="search_field_hint">NICKNAME, ID, URL, MATCH</string>
+
+    <string name="overview">Overview</string>
+    <string name="farm">Farm</string>
+    <string name="damage">Damage</string>
+    <string name="charts">Charts</string>
+
+    <string name="player_stats">Player\nstatistics</string>
+    <string name="all_pick">ALL PICK</string>
+    <string name="unranked">Unranked</string>
+    <string name="ranked">Ranked</string>
+    <string name="duration">Duration:</string>
+    <string name="date">Date:</string>
+    <string name="win_of">... VICTORY</string>
+    <string name="match_number">Match №</string>
+    <string name="matches">matches</string>
+    <string name="heroes">heroes</string>
+    <string name="items">items</string>
+    <string name="records">records</string>
+    <string name="search_results">SEARCH\nRESULTS</string>
+
+    <string name="dialog_help_text_1">How to find a player?</string>
+    <string name="dialog_help_text_2">In order to find a certain player, you need to enter his Steam ID, URL or current nickname in the search field.</string>
+    <string name="dialog_help_text_3">How do I find out the Steam ID?</string>
+    <string name="dialog_help_text_4">Click on your nickname in the upper right corner of Steam and go to: "About the account".</string>
+    <string name="dialog_help_text_5">How do I find out the Steam URL?</string>
+    <string name="dialog_help_text_6">Go to the player\'s profile in the browser. Its URL will be displayed in the address bar.</string>
+
+    <string name="hero">Hero</string>
+    <string name="result">Result</string>
+    <string name="games">Matches:</string>
+    <string name="wins">Wins:</string>
+    <string name="loading">Loading...</string>
+    <string name="loses">Loses:</string>
+    <string name="time_in_game">Time in game:</string>
+    <string name="winrate">Winrate:</string>
+    <string name="avgKda">Average KDA:</string>
+    <string name="games_count">Matches</string>
+    <string name="wins_percentage">Winrate</string>
+    <string name="item">Item</string>
+    <string name="gold">Gold</string>
+    <string name="experience">Experience</string>
+    <string name="dire_forces">Dire</string>
+    <string name="radiant_forces">Radiant</string>
+    <string name="missing_charts_error_message">This match has not been analyzed yet</string>
+    <string name="analyze_match">Analyze match</string>
+    <string name="analyze_match_button_label">May take up to 30 seconds.</string>
+    <string name="buildings">Buildings</string>
+    <string name="heal">Heal</string>
+    <string name="player">Player</string>
+    <string name="lasthits_denies">Last hits / Denies</string>
+    <string name="level">Level</string>
+    <string name="backpack">Backpack</string>
+    <string name="navigation">Navigation:</string>
+    <string name="kda">K/D/A</string>
+    <string name="lose">Lose</string>
+
+    <string name="anonymous">anonymous</string>
+    <string name="date_format">dd/MM/yyyy HH:mm</string>
+    <string name="date_format_dots">dd.MM.yyyy</string>
+
+    <string name="win">Victory</string>
+    <string name="fill_search_field">Fill in the search field</string>
+    <string name="abbreviated_hour">h.</string>
+    <string name="radiant_victory">Radiant victory</string>
+    <string name="dire_victory">Dire victory</string>
+    <string name="charts_for_old_matches_error_message">Chart view is only available for matches in the past month</string>
+    <string name="dotabuff_url">https://dotabuff.com/</string>
+    <string name="snackbar_error">An error has occurred. Try again</string>
+
+    <string name="gpm_xpm">GPM/XPM</string>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:id="@+id/gpmAndXpm"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="1359 / 1253"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/netWorth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/creepStats"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/creepStats"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="1173 / 113"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gpmAndXpm"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playerName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/netWorth"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="170.3K"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fbb829"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gpmAndXpm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/heroIcon"
+        android:layout_width="41dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pudge" />
+
+    <TextView
+        android:id="@+id/playerKda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="1 / 2 / 3"
+        android:textColor="#c1c1c1"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerName"
+        app:layout_constraintTop_toBottomOf="@+id/playerName" />
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:letterSpacing="0.04"
+        android:text="abcdefghjklmn..."
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="8.3dp"
+        app:layout_constraintBottom_toTopOf="@+id/playerKda"
+        app:layout_constraintStart_toEndOf="@+id/heroIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

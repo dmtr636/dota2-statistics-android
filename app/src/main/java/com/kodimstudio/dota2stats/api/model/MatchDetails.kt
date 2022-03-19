@@ -1,0 +1,53 @@
+package com.kodimstudio.dota2stats.api.model
+
+data class MatchDetails(
+    val match_id: Long,
+    val barracks_status_dire: Int,
+    val barracks_status_radiant: Int,
+    val dire_score: Int?,
+    val duration: Int,
+    val game_mode: Int,
+    val lobby_type: Int,
+    val radiant_score: Int?,
+    val tower_status_radiant: Int,
+    val tower_status_dire: Int,
+    val radiant_win: Boolean,
+    val start_time: Long,
+    val players: List<MatchDetailsPlayer>,
+    val radiant_gold_adv: List<Int>?,
+    val radiant_xp_adv: List<Int>?
+) {
+    data class MatchDetailsPlayer(
+        val player_slot: Int,
+        val account_id: Long,
+        val assists: Int,
+        val backpack_0: Int?,
+        val backpack_1: Int?,
+        val backpack_2: Int?,
+        val backpack_3: Int?,
+        val deaths: Int,
+        val denies: Int,
+        val gold: Int,
+        val gold_per_min: Int,
+        val gold_spend: Int,
+        val hero_damage: Int,
+        val hero_healing: Int,
+        val hero_id: Int,
+        val item_0: Int?,
+        val item_1: Int?,
+        val item_2: Int?,
+        val item_3: Int?,
+        val item_4: Int?,
+        val item_5: Int?,
+        val item_neutral: Int?,
+        val kills: Int,
+        val last_hits: Int,
+        val level: Int,
+        val net_worth: Int?,
+        val tower_damage: Int,
+        val xp_per_min: Int,
+        val personaname: String?,
+        val isRadiant: Boolean,
+        val total_gold: Int
+    )
+}

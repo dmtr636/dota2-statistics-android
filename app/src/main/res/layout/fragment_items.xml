@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.Material.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/divider_hero"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#d43b3b"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_hero_stats_hero"
+            app:layout_constraintStart_toStartOf="@+id/fragment_hero_stats_hero"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_hero_stats_matches_count" />
+
+        <View
+            android:id="@+id/divider_wins_percentage"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#d43b3b"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_hero_stats_wins_percentage"
+            app:layout_constraintStart_toStartOf="@+id/fragment_hero_stats_wins_percentage"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_hero_stats_matches_count" />
+
+        <View
+            android:id="@+id/divider_kda"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#d43b3b"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_hero_stats_kda"
+            app:layout_constraintStart_toStartOf="@+id/fragment_hero_stats_kda"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_hero_stats_matches_count" />
+
+        <TextView
+            android:id="@+id/fragment_hero_stats_hero"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="@string/item"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#c1c1c1"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/match_list_item_hero_name_header"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/myriadpro_bold"
+            android:textColor="#c1c1c1"
+            android:textSize="11.7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fragment_hero_stats_hero"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragment_hero_stats_matches_count"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="@string/games_count"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#c1c1c1"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_hero_stats_wins_percentage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/match_list_item_hero_name_header"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragment_hero_stats_wins_percentage"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="@string/wins_percentage"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#c1c1c1"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_hero_stats_kda"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_hero_stats_matches_count"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragment_hero_stats_kda"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_bold"
+            android:text="@string/kda"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#c1c1c1"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_hero_stats_wins_percentage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider_matches_count"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#d43b3b"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_hero_stats_matches_count"
+            app:layout_constraintStart_toStartOf="@+id/fragment_hero_stats_matches_count"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_hero_stats_matches_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/heroesStatsList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarThumbVertical="@color/white"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

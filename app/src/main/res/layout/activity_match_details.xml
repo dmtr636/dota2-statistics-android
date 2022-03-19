@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c242d"
+    tools:context=".ui.match_details.MatchDetailsActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="@android:style/Widget.Material.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:background=" #1c242d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchDetailsLayout"
+        app:tabGravity="fill"
+        app:tabIndicator="@null"
+        app:tabInlineLabel="false"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="4dp"
+        app:tabPaddingStart="4dp"
+        app:tabSelectedTextColor="#d43b3b"
+        app:tabTextAppearance="@style/TabText"
+        app:tabTextColor="#FFFFFF">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/farm" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/damage" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/charts" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="52.7dp"
+        android:background="@drawable/verh_panel_startpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dota_logo_main_icon_copy" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="4.7dp"
+            android:text="@string/player_stats"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="11.7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            android:fontFamily="@font/myriadpro_regular"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="4.7dp"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="11.7dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/inFavourite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <ImageView
+            android:id="@+id/inFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/star_copy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchDetailsLayout"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/grad_test_match"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/matchGameMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="9.3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="@+id/matchIsRanking"
+            app:layout_constraintTop_toTopOf="@+id/textView41"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/matchIsRanking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="9.3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView39"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/matchDuration"
+            app:layout_constraintTop_toTopOf="@+id/textView39"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/matchDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="9.3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            app:layout_constraintStart_toEndOf="@+id/textView41"
+            app:layout_constraintTop_toTopOf="@+id/textView41"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="@string/duration"
+            android:textAllCaps="true"
+            android:textColor=" #c1c1c1"
+            android:textSize="9.3dp"
+            app:layout_constraintStart_toStartOf="@+id/matchResult"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/matchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="9.3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView39"
+            app:layout_constraintStart_toEndOf="@+id/textView39"
+            app:layout_constraintTop_toTopOf="@+id/textView39"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="@string/date"
+            android:textAllCaps="true"
+            android:textColor=" #c1c1c1"
+            android:textSize="9.3dp"
+            app:layout_constraintStart_toStartOf="@+id/matchResult"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/radiantKills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#9ab244"
+            android:textSize="11.7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/matchResult"
+            app:layout_constraintStart_toEndOf="@+id/textView37"
+            app:layout_constraintTop_toTopOf="@+id/matchResult"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="-"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="11.7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/matchResult"
+            app:layout_constraintStart_toEndOf="@+id/direKills"
+            app:layout_constraintTop_toTopOf="@+id/matchResult"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/direKills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor=" #a63841"
+            android:textSize="11.7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/matchResult"
+            app:layout_constraintStart_toEndOf="@+id/matchResult"
+            app:layout_constraintTop_toTopOf="@+id/matchResult" />
+
+        <TextView
+            android:id="@+id/matchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="@string/win_of"
+            android:textAllCaps="true"
+            android:textColor=" #a63841"
+            android:textSize="11.7dp"
+            app:layout_constraintStart_toStartOf="@+id/textView32"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/matchNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="..."
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="8.3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView32"
+            app:layout_constraintStart_toEndOf="@+id/textView32"
+            app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:letterSpacing="0.04"
+            android:text="@string/match_number"
+            android:textAllCaps="true"
+            android:textColor=" #c1c1c1"
+            android:textSize="8.3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="81dp"
+            android:layout_height="81dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/minimap_7_23_simple" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_top_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="57dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_top_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="72dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_bot_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_bot_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_bot_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="55dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_top_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="71dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_top_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_top_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="71dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_mid_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="61dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_mid_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="64dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_mid_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="55dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_mid_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="61dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_mid_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="46dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_4_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/radiant_tower_4_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_top_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="38dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_top_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_mid_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="27dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_mid_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_bot_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_bot_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_rax_top_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_bot_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="67dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/radiant_rax_bot_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="71dp"
+            app:layout_constraintEnd_toEndOf="@+id/radiant_rax_bot_1"
+            app:layout_constraintStart_toStartOf="@+id/radiant_rax_bot_1"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_rax_top_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_rax_bot_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_rax_bot_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_rax_mid_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_rax_mid_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_rax" />
+
+        <ImageView
+            android:id="@+id/dire_tower_bot_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_mid_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.256"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_top_3"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_tower_4_2"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.871"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.192"
+            app:srcCompat="@drawable/badguys_tower" />
+
+        <ImageView
+            android:id="@+id/dire_fort"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.131"
+            app:srcCompat="@drawable/badguys_fort" />
+
+        <ImageView
+            android:id="@+id/radiant_fort"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:srcCompat="@drawable/goodguys_fort" />
+
+        <ImageView
+            android:id="@+id/dire_tower_4_1"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.833"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.153"
+            app:srcCompat="@drawable/badguys_tower" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
